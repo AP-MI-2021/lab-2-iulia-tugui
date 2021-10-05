@@ -81,6 +81,38 @@ def main():
     test_is_superprime()
     print(is_antipalindrome(27583))
     test_is_antipalindrome()
+    shouldRun = True
+    while shouldRun :
+        print ("1. Palindrom ")
+        print ("2. Superprim")
+        print ("3. Antipalindrom")
+        print ("4. Test daca este palindrom")
+        print ("5. Test daca este superprim")
+        print ("6. Test daca este antipalindrom")
+        print ("x. Iesire")
+        option = input("Introduceti optiunea: ")
+        if option == "x":
+            shouldRun = False
+        elif option== "1":
+            numar = int(input("Introduceti un numar spre verificare: "))
+            print(is_palindrome(numar))
+        elif option == "2":
+            numar = int(input("Introduceti un numar spre verificare: "))
+            print(is_superprime(numar))
+        elif option == "3":
+            numar = int(input("Introduceti un numar spre verificare: "))
+            print(is_antipalindrome(numar))
+        elif option == "4":
+            print("Se ruleaza testele daca functia palindrom este corecta")
+            test_is_palindrome()
+        elif option == "5":
+            print("Se ruleaza testele daca functia superprim este corecta")
+            test_is_superprime()
+        elif option == "6":
+            print("Se ruleaza testele daca functia antipalindrom este corecta")
+            test_is_antipalindrome()
+        else:
+            print("Optiunea este gresita!")
 
 if __name__ == "__main__":
     main()
